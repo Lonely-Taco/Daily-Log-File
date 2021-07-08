@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"Daily_log_file_atlas_1", frames: [[0,84,181,55],[0,0,221,82]]}
+		{name:"Daily_log_file_atlas_1", frames: [[223,244,181,55],[0,244,221,82],[524,227,342,142],[524,0,407,225],[0,0,522,242]]}
 ];
 
 
@@ -150,9 +150,30 @@ p.nominalBounds = new cjs.Rectangle(0,0,2202,3000);
 
 
 
-(lib.CachedBmp_244 = function() {
+(lib.CachedBmp_250 = function() {
 	this.initialize(ss["Daily_log_file_atlas_1"]);
 	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.CachedBmp_249 = function() {
+	this.initialize(ss["Daily_log_file_atlas_1"]);
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.CachedBmp_251 = function() {
+	this.initialize(ss["Daily_log_file_atlas_1"]);
+	this.gotoAndStop(3);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.CachedBmp_248 = function() {
+	this.initialize(ss["Daily_log_file_atlas_1"]);
+	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
@@ -164,7 +185,10 @@ p.nominalBounds = new cjs.Rectangle(0,0,2202,3000);
 	this.instance = new lib.oldbrownvintageparchmentpapertexture();
 	this.instance.setTransform(-297,-404,0.2693,0.2693);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+	this.instance_1 = new lib.CachedBmp_251();
+	this.instance_1.setTransform(-180.95,-190.95,0.4942,0.4942);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
 
 	this._renderFirstFrame();
 
@@ -179,7 +203,7 @@ p.nominalBounds = new cjs.Rectangle(-297,-404,593.1,808);
 	this.instance = new lib.CachedBmp_238();
 	this.instance.setTransform(16,4.3,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_244();
+	this.instance_1 = new lib.CachedBmp_250();
 	this.instance_1.setTransform(-0.45,-0.45,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
@@ -237,23 +261,29 @@ p.nominalBounds = new cjs.Rectangle(-0.4,-0.4,110.5,41);
 	this.timeline.addTween(cjs.Tween.get(this.turn_page_button).to({_off:true},1).wait(53));
 
 	// pages
-	this.instance_1 = new lib.Tween1("synched",0);
-	this.instance_1.setTransform(600.6,400.05,1.0117,0.9901,0,0,0,296.6,0.1);
+	this.instance_1 = new lib.CachedBmp_249();
+	this.instance_1.setTransform(39,149,0.5,0.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({regX:304.8,regY:-0.2,scaleX:0.9435,scaleY:1,skewY:90.1992,x:289,y:402.45},14).to({_off:true},1).wait(39));
+	this.instance_2 = new lib.Tween1("synched",0);
+	this.instance_2.setTransform(600.6,400.05,1.0117,0.9901,0,0,0,296.6,0.1);
+
+	this.instance_3 = new lib.CachedBmp_248();
+	this.instance_3.setTransform(109,139,0.5,0.5);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_3},{t:this.instance_2,p:{regX:296.6,regY:0.1,scaleX:1.0117,scaleY:0.9901,skewY:0,x:600.6,y:400.05}},{t:this.instance_1}]}).to({state:[{t:this.instance_2,p:{regX:304.8,regY:-0.2,scaleX:0.9435,scaleY:1,skewY:90.1992,x:289,y:402.45}}]},14).to({state:[]},1).wait(39));
 
 	// Page_2
-	this.instance_2 = new lib.Tween1("synched",0);
-	this.instance_2.setTransform(287.95,404,0.8232,1,0,0,-89.2714,-296.2,-0.1);
-	this.instance_2._off = true;
+	this.instance_4 = new lib.Tween1("synched",0);
+	this.instance_4.setTransform(287.95,404,0.8232,1,0,0,-89.2714,-296.2,-0.1);
+	this.instance_4._off = true;
 
 	this.previous_page_button = new lib.button();
 	this.previous_page_button.name = "previous_page_button";
 	this.previous_page_button.setTransform(30,30);
 	new cjs.ButtonHelper(this.previous_page_button, 0, 1, 1);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_2}]},14).to({state:[{t:this.instance_2},{t:this.previous_page_button}]},14).to({state:[]},1).wait(25));
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(14).to({_off:false},0).to({regX:-296,regY:0.1,scaleX:1.0117,scaleY:0.9901,skewY:0,x:0.55,y:400.05},14).to({_off:true},1).wait(25));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_4}]},14).to({state:[{t:this.instance_4},{t:this.previous_page_button}]},14).to({state:[]},1).wait(25));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(14).to({_off:false},0).to({regX:-296,regY:0.1,scaleX:1.0117,scaleY:0.9901,skewY:0,x:0.55,y:400.05},14).to({_off:true},1).wait(25));
 
 	this._renderFirstFrame();
 
@@ -268,8 +298,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/oldbrownvintageparchmentpapertexture.jpg?1625750455142", id:"oldbrownvintageparchmentpapertexture"},
-		{src:"images/Daily_log_file_atlas_1.png?1625750455128", id:"Daily_log_file_atlas_1"}
+		{src:"images/oldbrownvintageparchmentpapertexture.jpg?1625750759587", id:"oldbrownvintageparchmentpapertexture"},
+		{src:"images/Daily_log_file_atlas_1.png?1625750759571", id:"Daily_log_file_atlas_1"}
 	],
 	preloads: []
 };
